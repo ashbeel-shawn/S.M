@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickBite Fast Food - Burgers, Pasta & Macaronies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(0,0,0,0.9);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        nav {
+            background: #ff6b35;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23ff9a56" width="1200" height="600"/><circle fill="%23ff6b35" cx="200" cy="150" r="80"/><circle fill="%23f7931e" cx="1000" cy="450" r="100"/><path fill="%23e55a16" d="M300 300 Q400 250 500 300 Q600 350 700 300 L800 350 Q900 320 1000 350"/></svg>') center/cover;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .menu {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .menu h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .menu-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .menu-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .menu-content {
+            padding: 1.5rem;
+        }
+
+        .menu-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #ff6b35;
+        }
+
+        .price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #27ae60;
+            margin: 1rem 0;
+        }
+
+        .description {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .order-btn {
+            background: #ff6b35;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .order-btn:hover {
+            background: #e55a16;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            nav li {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<html lang="en">
+    <header>
+        <h1>🍔 QuickBite Fast Food 🍝</h1>
+        <p>$.M<p>
+        <p>Fast. Fresh. Delicious.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#burgers">🍔 Burgers</a></li>
+            <li><a href="#pasta">🍝 Pasta</a></li>
+            <li><a href="#macaronies">🍜 Macaronies</a></li>
+            <li><a href="#order">Order Now</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h2>Craving Something Quick & Tasty?</h2>
+        <p>We've got your favorites ready in minutes!</p>
+    </section>
+
+    <section class="menu" id="menu">
+        <h2>Our Menu</h2>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+       <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="machoroni image1.png" class="d-block w-100" alt=""150px height="600px">
+    </div>
+    <div class="carousel-item">
+      <img src="pasta image2.png" class="d-block w-100" alt=""150px height="600px">
+    </div>
+    <div class="carousel-item">
+      <img src="spagetti image3.png" class="d-block w-100" alt=""150px height="600px">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+        <div class="menu-grid" id="burgers">
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=999&q=80" alt="Juicy Cheeseburger" class="menu-image">
+                <div class="menu-content">
+                    <h3>Classic Cheeseburger</h3>
+                    <div class="price">Rs.399</div>
+                    <p class="description">Juicy beef patty, melted cheddar, fresh lettuce, tomato, and our special sauce on a toasted bun.</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Bacon BBQ Burger" class="menu-image">
+                <div class="menu-content">
+                    <h3>Bacon BBQ Burger</h3>
+                    <div class="price">Rs.399</div>
+                    <p class="description">Double patty with crispy bacon, BBQ sauce, onion rings, and pepper jack cheese.</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=998&q=80" alt="Veggie Burger" class="menu-image">
+                <div class="menu-content">
+                    <h3>Veggie Delight</h3>
+                    <div class="price">Rs.499</div>
+                    <p class="description">Grilled veggie patty with avocado, sprouts, and chipotle mayo on whole wheat bun.</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-grid" id="pasta">
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Creamy Pasta" class="menu-image">
+                <div class="menu-content">
+                    <h3>Alfredo Pasta</h3>
+                    <div class="price">Small Rs.299/Medium Rs.399/Large Rs.499</div>
+                    <p class="description">Fettuccine in creamy parmesan sauce with grilled chicken and mushrooms.</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Spaghetti Bolognese" class="menu-image">
+                <div class="menu-content">
+                    <h3>Spaghetti Bolognese</h3>
+                    <div class="price">Small Rs.299/Medium Rs.399/Large Rs.499</div>
+                    <p class="description">Rich meat sauce with ground beef, tomatoes, and herbs served over spaghetti.</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-grid" id="macaronies">
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1626082927698-f6b983549e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Mac and Cheese" class="menu-image">
+                <div class="menu-content">
+                    <h3>Classic Mac & Cheese</h3>
+                    <div class="price">Small Rs.299/Medium Rs.399/Large Rs.499</div>
+                    <p class="description">Crispy baked macaroni with three-cheese blend, breadcrumbs, and a hint of mustard.</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1579586140626-598610c8ea2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Buffalo Mac" class="menu-image">
+                <div class="menu-content">
+                    <h3>Buffalo Chicken Mac</h3>
+                    <div class="price">Small Rs.299/Medium Rs.399/Large Rs.499</div>
+                    <p class="description">Spicy buffalo chicken, blue cheese, and macaroni in a creamy buffalo sauce.</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="hero">
+        <h2>Ready to Order?</h2>
+        <p>Call us at <strong>(03180181953) Payment On</strong>
+              Easypaisa:(03180181953) & jazzchash:(03192242293)</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 QuickBite Fast Food. All rights reserved. | Fast Delivery in 20 to 30 minutes!</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add to cart animation
+        document.querySelectorAll('.order-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.textContent = 'Added! 🎉';
+                this.style.background = '#27ae60';
+                setTimeout(() => {
+                    this.textContent = 'Oder Now';
+                    this.style.background = '#ff6b35';
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>
